@@ -106,24 +106,23 @@ void searchPassword(const string& searchTerm) {
 
 int main() {
     srand(time(nullptr));
-
-    cout << "Choose an option:" << endl;
-    cout << "1. Save a new password" << endl;
-    cout << "2. Search for an existing password" << endl;
-    int option;
-    cin >> option;
-    cin.ignore();
-
-    if (option == 1) {
-        savePassword();
-    } else if (option == 2) {
-        string searchTerm;
-        cout << "Enter a search term: ";
-        getline(cin, searchTerm);
-        searchPassword(searchTerm);
-    } else {
-        cout << "Invalid option." << endl;
-    }
-
-    return 0;
-}
+    while (true) {   
+        system("cls");     
+        cout << "Choose an option:" << endl;
+        cout << "1. Save a new password" << endl;
+        cout << "2. Search for an existing password" << endl;
+        cout << "3. Exit" << endl;
+        int option;
+        cin >> option;
+        cin.ignore();
+        if (option == 1) {
+            system("cls");
+            savePassword();
+            cout << "Going back to menu in 5....";
+            system("timeout /t 5 /nobreak");
+        } else if (option == 2) {
+            system("cls");
+            string searchTerm;
+            cout << "Enter a search term: ";
+            getline(cin, searchTerm);
+            searchPa
