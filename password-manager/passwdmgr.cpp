@@ -125,4 +125,12 @@ int main() {
             string searchTerm;
             cout << "Enter a search term: ";
             getline(cin, searchTerm);
-            searchPa
+            searchPassword(searchTerm);
+            cout << "Going back to menu in 15....";
+            system("timeout /t 15 /nobreak");
+    } else {
+        cout << "Invalid option." << endl;
+    }
+
+    return 0;
+}
